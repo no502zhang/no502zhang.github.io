@@ -1,1 +1,53 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" id="btnNav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="header">NO502ZHANG</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div id="main" class="col-sm-8">
+                <h1>{{ message }}</h1>
+            </div>
+            <div id="sidebar" class="col-sm-4 sidebar">
+                <div class="dir">
+                    <h4>目录</h4>
+                    <ul class="nav">
+                        <li v-for="blog in blogs" v-if="blog.type == 'dir'"><a href="#" v-on:click="dirClick(blog.path)">{{ blog.name }}</a></li>
+                    </ul>
+                </div>
+                <div class="file">
+                    <h4>文章</h4>
+                    <ul class="nav">
+                        <li v-for="blog in blogs" v-if="blog.type == 'file'"><a href="#" v-on:click="fileClick(blog.path)">{{ blog.name }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="public/js/index.js"></script>
+</body>
+
+</html>
