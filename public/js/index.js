@@ -10,8 +10,7 @@ $(document).ready(function () {
     sidebar = new Vue({
         el: '#sidebar',
         data: {
-            blogs: {},
-            message: 'Hello Vue!'
+            blogs: {}
         },
         created: function () {
             getBlogList('blog');
@@ -29,7 +28,12 @@ $(document).ready(function () {
     main = new Vue({
         el: '#main',
         data: {
-            message: 'Hello Vue!'
+            message: '# Hello ZHANG!'
+        },
+        computed: {
+            compiledMarkdown: function () {
+                return marked(this.message, { sanitize: true })
+            }
         }
     })
 });

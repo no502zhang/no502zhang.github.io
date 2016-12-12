@@ -25,8 +25,7 @@
 
     <div class="container">
         <div class="row">
-            <div id="main" class="col-sm-8">
-                <h1>{{ message }}</h1>
+            <div id="main" class="col-sm-8" v-html="compiledMarkdown">
             </div>
             <div id="sidebar" class="col-sm-4 sidebar">
                 <div class="dir">
@@ -47,6 +46,7 @@
     <footer></footer>
     <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="public/js/marked.min.js"></script>
     <script src="public/js/index.js"></script>
 </body>
 
