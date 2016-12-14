@@ -35,20 +35,22 @@
             <div class="col-sm-8" v-html="compiledMarkdown">
             </div>
             <div class="col-sm-4 sidebar">
-                <template id="blog-sidebar-template">
-                    <div>
-                        <h4>{{ name }}</h4>
-                        <ul class="nav">
-                            <li v-for="item in items"><a :href="item.url">{{ item.name }}</a></li>
-                        </ul>
-                    </div>
-                </template>
-                <blog-sidebar v-if="files.length > 0" name="文章" v-bind:items="dirs"></blog-sidebar>
+                <blog-sidebar v-if="files.length > 0" name="文章" v-bind:items="files"></blog-sidebar>
                 <blog-sidebar v-if="dirs.length > 0" name="目录" v-bind:items="dirs"></blog-sidebar>
             </div>
         </div>
     </div>
     <footer></footer>
+
+    <template id="blog-sidebar-template">
+        <div>
+            <h4>{{ name }}</h4>
+            <ul class="nav">
+                <li v-for="item in items"><a :href="item.url">{{ item.name }}</a></li>
+            </ul>
+        </div>
+    </template>
+
     <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="public/js/marked.min.js"></script>
