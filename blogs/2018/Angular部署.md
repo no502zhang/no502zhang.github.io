@@ -11,3 +11,14 @@
 部署生产还需要对代码进行混淆及做其他优化,此时构建命令要再加上 --prod
 
     ng build --base-href=/my/app/ --prod
+	
+带路由的应用必须以 index.html 作为后备页面
+
+	try_files $uri $uri/ /index.html;
+	
+nginx中作为一个子应用发布时的配置
+
+	location /orders {
+        root /home/ubuntu/www/;
+        try_files $uri $uri/ /orders/index.html;
+    }

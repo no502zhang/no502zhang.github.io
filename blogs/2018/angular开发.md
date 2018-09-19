@@ -34,7 +34,7 @@ angular cli 也提供了ng set 命令用于设置参数.
 
 	import { SharedModule } from '../shared/shared.module';
 
-在新创建的users模块中创建模块级共享模块
+在新创建的users模块中创建模块级共享模块 // 是否需要?
 
 	ng generate module users/shared
 
@@ -53,12 +53,26 @@ angular cli 也提供了ng set 命令用于设置参数.
 	
 增加模块级路由
 
-	ng generate module users/users-routing --flat  // 不注册会怎样?
 	ng generate module users/users-routing --flat --module=users
+	
+配置模块路由, 其中RouterModule注册为child
+
+	const userRoutes: Routes = [
+	  { path: 'user-list', component: UserListComponent },
+	  { path: 'user-detail/:id', component: UserDetailComponent },
+	];
+	
+	imports: [
+	  RouterModule.forChild(userRoutes)
+	],
 	
 增加应用级路由
 
 	ng generate module app-routing --flat --module=app
+	
+路由模块中须引入angular路由
+
+	import { RouterModule, Routes } from '@angular/router';
 	
 开发过程中为了方便调用后端接口,在根目录增加代理配置文件 proxy.config.json
 	
