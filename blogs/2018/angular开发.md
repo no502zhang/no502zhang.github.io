@@ -51,6 +51,11 @@ angular cli 也提供了ng set 命令用于设置参数.
 	ng generate component users/user-list
 	ng generate component users/user-detail
 	
+创建管道
+
+	ng g pipe orders/shared/getOrderStatusName
+
+	
 增加模块级路由
 
 	ng generate module users/users-routing --flat --module=users
