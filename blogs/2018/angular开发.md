@@ -7,6 +7,10 @@ angular cli 也提供了ng set 命令用于设置参数.
 修改为淘宝镜像需要设置packageManager配置
 
 	ng set --global packageManager=cnpm
+	
+npm使用代理
+
+	npm config set https-proxy http://192.168.91.10:10001
 
 首先使用下列命令来生成一个新项目以及默认的应用代码
 
