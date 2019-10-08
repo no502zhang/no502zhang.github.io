@@ -24,3 +24,8 @@
 SSH连接命令
 
 	ssh root@192.168.0.11
+	
+## 创建软连接
+
+	ln -s 源地址 目的地址
+	ln -s registry-1.0-SNAPSHOT.jar registry.jar

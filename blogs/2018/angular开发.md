@@ -44,7 +44,7 @@ npm使用代理
 
 使用命名在模块级共享模块中创建数据接口, 再将文件改名为user.model.ts, 使得可以通过后缀区别类型
 
-	ng generate interface users/shared/user
+	ng generate interface users/shared/user model
 
 在模块级共享模块中创建服务
 
