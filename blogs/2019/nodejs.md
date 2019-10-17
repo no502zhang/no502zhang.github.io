@@ -5,7 +5,7 @@
 1. npm 在全局都安装过哪些包
 
 ```
-npm list -g ==depth 0
+npm list -g --depth 0
 ```
 
 2. yarn使用
