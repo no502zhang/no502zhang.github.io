@@ -5,7 +5,7 @@
 1. npm 在全局都安装过哪些包
 
 ```
-npm list -g ==depth 0
+npm list -g --depth 0
 ```
 
 2. yarn使用
@@ -16,7 +16,7 @@ yarn init
 # 添加依赖包
 yarn add [包名]@[版本|tag]
 # 添加为开发依赖
-yarn add [包名] —dev
+yarn add [包名] -—dev
 # 全局安装
 yarn global add [包名]
 # 删除依赖
