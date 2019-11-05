@@ -26,3 +26,14 @@ yarn
 ```
 
 
+## 部署
+
+### 使用pm2运行
+
+#### 安装pm2
+
+    sudo npm install -g pm2
+
+#### 运行
+
+    pm2 start /mnt/www/adminMongo/app.js
