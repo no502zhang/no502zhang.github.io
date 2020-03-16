@@ -1,3 +1,8 @@
+安装 Angular CLI
+
+	npm install -g @angular/cli
+
+
 国内npm很慢, 可以使用淘宝镜像
 
 	npm install -g cnpm --registry=https://registry.npm.taobao.org
