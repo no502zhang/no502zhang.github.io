@@ -13,6 +13,10 @@
 
     sudo apt-get update
     sudo apt-get install jenkins
+
+启动
+
+	sudo service jenkins start
 	
 ## 安装maven
 可以手动安装maven, 也可以让jenkins自动安装
