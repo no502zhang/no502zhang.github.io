@@ -29,3 +29,7 @@ SSH连接命令
 
 	ln -s 源地址 目的地址
 	ln -s registry-1.0-SNAPSHOT.jar registry.jar
+
+## 查看端口占用情况
+
+	netstat -ap | grep 8080

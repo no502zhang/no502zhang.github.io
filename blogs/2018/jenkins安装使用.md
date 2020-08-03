@@ -26,3 +26,6 @@
 	https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json
 	
 需要安装的插件有 GitHub plugin, Maven Integration, Publish Over SSH
+
+## 修改端口
+找到/etc/init.d/jenkins中的端口设置, 将其改为需要的端口
