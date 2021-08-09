@@ -78,3 +78,6 @@
 	docker-compose down
 	#启动过程中出错会导致无法stop和down，执行以下命令清除错误信息
 	sudo aa-remove-unknown
+
+
+在docker-compose部署的情况下如果修改内容只需要修改docker-compose.yml文件对应的地方,例如2181:2181改成2182:2182,然后再次在docker-compose.yml文件对应的目录下执行docker-compose up -d就能达到更新后的效果。
