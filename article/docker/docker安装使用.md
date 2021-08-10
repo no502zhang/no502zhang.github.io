@@ -35,7 +35,11 @@
 + 删除容器
 
 	docker rm 容器ID
-	
+
++ 查看容器日志
+
+	docker logs 容器全名
+
 + 容器中运行命令
 
 	docker run 容器全名 要在镜像中运行的命令
