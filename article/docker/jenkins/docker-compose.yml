@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jenkins:
+    image: 'jenkinsci/blueocean'
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - './jenkins_home:/var/jenkins_home'
+    user: root          # 覆盖容器中内置的帐号,解决权限问题
+    restart: always
