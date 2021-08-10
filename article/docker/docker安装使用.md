@@ -20,6 +20,10 @@
 
 	docker ps
 
++ 列出正在运行的容器资源使用情况
+
+	docker stats
+
 + 删除镜像,其中镜像ID通过"docker images"查出来
 
 	docker rmi 镜像ID
@@ -35,6 +39,10 @@
 + 容器中运行命令
 
 	docker run 容器全名 要在镜像中运行的命令
+
++ 在运行的容器中执行命令，开启一个交互模式的终端
+
+	docker exec -i -t  容器全名 /bin/bash
 
 + 保存镜像
 
@@ -72,6 +80,8 @@
 
 	#创建 docker-compose.yml后在docker-compose.yml所在目录执行  
 	docker-compose up -d
+	#重启，不会更新docker-compose.yml中内容
+	docker-compose restart
 	#停止
 	docker-compose stop
 	#停止并删除
