@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql
+    ports:
+        - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql       # 挂载数据目录
+#      - ./conf:/etc/mysql/conf.d  # 挂载配置文件目录
+      - ./conf/my.cnf:/etc/my.cnf   # 挂载配置文件
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+    restart: always
