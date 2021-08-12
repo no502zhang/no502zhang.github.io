@@ -15,7 +15,7 @@ services:
 #      - "./data:/kafka"
     environment:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://${IP}:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://172.17.0.1:9092
       - KAFKA_LISTENERS=PLAINTEXT://:9092
     depends_on:
       - zookeeper

@@ -80,6 +80,12 @@
 	#查看docker-compose版本  
 	docker-compose --version
 
++ 使用apt安装
+
+	#ubuntu20.04可以直接使用apt安装
+	sudo apt install docker-compose
+
+
 ## 使用docker-compose
 
 	#创建 docker-compose.yml后在docker-compose.yml所在目录执行  
