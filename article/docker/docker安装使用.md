@@ -101,3 +101,17 @@
 
 
 在docker-compose部署的情况下如果修改内容只需要修改docker-compose.yml文件对应的地方,例如2181:2181改成2182:2182,然后再次在docker-compose.yml文件对应的目录下执行docker-compose up -d就能达到更新后的效果。
+
+
+## 使用 Dockerfile 定制镜像
+Dockerfile 是一个用来构建镜像的文本文件，文本内容包含了一条条构建镜像所需的指令和说明。
+
+	#定制的镜像都是基于 FROM 的镜像，这里的 java:8 就是定制需要的基础镜像。 
+	FROM java:8
+	# VOLUME 指定了临时文件目录为/tmp。
+	# 其效果是在主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp
+	VOLUME /tmp 
+	# 将jar包添加到容器中并更名为app.jar
+	ADD demo-0.0.1-SNAPSHOT.jar app.jar 
+	# RUN 用于执行后面跟着的命令行命令。运行jar包
+	RUN bash -c 'touch /app.jar'
