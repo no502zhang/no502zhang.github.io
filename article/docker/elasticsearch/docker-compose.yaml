@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.5
+    volumes:
+      - ./opt/data:/usr/share/elasticsearch/data          # 挂载数据目录
+#      - ./opt/config:/usr/share/elasticsearch/config      # 挂载配置文件目录
+#      - ./opt/plugins:/usr/share/elasticsearch/plugins    # 只挂载my.cnf配置文件
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    restart: always
